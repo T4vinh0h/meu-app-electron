@@ -31,8 +31,8 @@ app.on('activate', () => {
 
 ipcMain.on('abrir-sobre', () => {
   const janelaSobre = new BrowserWindow({
-    width: 400,
-    height: 300,
+    width: 900,
+    height: 600,
     title: 'Sobre',
   });
   janelaSobre.loadFile('html/sobre.html');
