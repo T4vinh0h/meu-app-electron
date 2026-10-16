@@ -1,13 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>APP</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 50px;
+            display: flex;
+            justify-content: center;
+        }
+        .container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 500px;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        p {
+            color: #666;
+            margin-bottom: 30px;
+        }
+        button {
+            padding: 12px 30px;
+            font-size: 14px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #btnAjuda {
+            background-color: #2196F3;
+        }
+        #btnAjuda:hover {
+            background-color: #0b7dda;
+        }
+        .footer {
+            margin-top: 30px;
+            color: #999;
+            font-size: 12px;
+        }
+    </style>
 </head>
 <body>
-    <button id="btnSobre">Sobre</button>
-    <button id="btnAjuda">Ajuda</button>
+    <div class="container">
+        <h1>Meu App</h1>
+        <p>Desenvolvido com Electron</p>
+        
+        <button id="btnSobre">Sobre</button>
+        <button id="btnAjuda">Ajuda</button>
+
+        <div class="footer">
+            <p>Versão 1.0.0 - Otávio Santos</p>
+        </div>
+    </div>
+    
     <script src="JAVASCRIPT/renderer.js"></script>
 </body>
 </html>
