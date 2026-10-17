@@ -20,6 +20,19 @@
             max-width: 800px;
             margin: 0 auto;
         }
+        .btn-voltar {
+            background-color: #2196F3;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        .btn-voltar:hover {
+            background-color: #0b7dda;
+        }
         h1 {
             color: #333;
             border-bottom: 2px solid #ddd;
@@ -46,12 +59,14 @@
 </head>
 <body>
     <div class="container">
+        <button class="btn-voltar" id="btnVoltar">← Voltar</button>
         <h1>Ajuda</h1>
         
         <h2>Como usar o APP</h2>
         <ul>
             <li>Clique no botão "Sobre" para ver informações sobre o desenvolvedor</li>
             <li>Clique no botão "Ajuda" para abrir esta janela de ajuda</li>
+            <li>Clique no botão "Calculadora" para abrir a calculadora</li>
         </ul>
 
         <h2>Informações</h2>
@@ -65,10 +80,17 @@
             <li>Desenvolvido com tecnologias web modernas</li>
             <li>Design responsivo e limpo</li>
             <li>Cross-platform (funciona em Windows, Mac e Linux)</li>
+            <li>Calculadora com 4 operações básicas</li>
         </ul>
 
         <h2>Suporte</h2>
         <p>Se você tiver alguma dúvida ou encontrar algum problema, entre em contato através do perfil do desenvolvedor na seção "Sobre".</p>
     </div>
+    
+    <script>
+        document.getElementById('btnVoltar').addEventListener('click', () => {
+            window.electronAPI.voltarHome();
+        });
+    </script>
 </body>
 </html>

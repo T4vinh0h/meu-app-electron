@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 30px;
+            display: flex;
+            justify-content: center;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            max-width: 350px;
+            text-align: center;
+        }
+        .btn-voltar {
+            background-color: #2196F3;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        .btn-voltar:hover {
+            background-color: #0b7dda;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        label {
+            display: block;
+            text-align: left;
+            color: #666;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        input:focus {
+            outline: none;
+            border-color: #4CAF50;
+        }
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box;
+            cursor: pointer;
+        }
+        select:focus {
+            outline: none;
+            border-color: #4CAF50;
+        }
+        .buttons {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        button {
+            flex: 1;
+            padding: 12px;
+            font-size: 14px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: white;
+            font-weight: bold;
+        }
+        #calcular {
+            background-color: #4CAF50;
+        }
+        #calcular:hover {
+            background-color: #45a049;
+        }
+        #limpar {
+            background-color: #f44336;
+        }
+        #limpar:hover {
+            background-color: #da190b;
+        }
+        #resultado {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 15px;
+            font-size: 18px;
+            color: #333;
+            min-height: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button class="btn-voltar" id="btnVoltar">← Voltar</button>
+        <h1>Calculadora</h1>
+        
+        <label for="numero1">Primeiro número:</label>
+        <input type="number" id="numero1" step="any" placeholder="Digite o primeiro número">
+        
+        <label for="numero2">Segundo número:</label>
+        <input type="number" id="numero2" step="any" placeholder="Digite o segundo número">
+        
+        <label for="operacao">Operação:</label>
+        <select id="operacao">
+            <option value="+">Adição (+)</option>
+            <option value="-">Subtração (-)</option>
+            <option value="*">Multiplicação (×)</option>
+            <option value="/">Divisão (÷)</option>
+        </select>
+        
+        <div class="buttons">
+            <button type="button" id="calcular">Calcular</button>
+            <button type="button" id="limpar">Limpar</button>
+        </div>
+        
+        <p id="resultado" aria-live="polite"></p>
+    </div>
+    
+    <script src="JAVASCRIPT/calculadora.js"></script>
+    <script>
+        document.getElementById('btnVoltar').addEventListener('click', () => {
+            window.electronAPI.voltarHome();
+        });
+    </script>
+</body>
+</html>

@@ -7,3 +7,8 @@ document.getElementById('btnAjuda')
 .addEventListener('click', () => {
 window.electronAPI.abrirAjuda();
 });
+
+document.getElementById('btnCalculadora')
+.addEventListener('click', () => {
+window.electronAPI.abrirCalculadora();
+});

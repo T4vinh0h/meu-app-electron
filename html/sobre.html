@@ -20,6 +20,19 @@
             max-width: 800px;
             margin: 0 auto;
         }
+        .btn-voltar {
+            background-color: #2196F3;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        .btn-voltar:hover {
+            background-color: #0b7dda;
+        }
         h1 {
             color: #333;
             border-bottom: 2px solid #ddd;
@@ -67,6 +80,7 @@
 </head>
 <body>
     <div class="container">
+        <button class="btn-voltar" id="btnVoltar">← Voltar</button>
         <div class="profile">
             <h1>Perfil</h1>
             <h2>Otávio Santos - Desenvolvedor Frontend</h2>
@@ -132,5 +146,11 @@
             </tbody>
         </table>
     </div>
+    
+    <script>
+        document.getElementById('btnVoltar').addEventListener('click', () => {
+            window.electronAPI.voltarHome();
+        });
+    </script>
 </body>
 </html>
